@@ -1,0 +1,46 @@
+.chessBoard{
+display:grid;
+grid-template-columns: repeat(8,80px);
+grid-template-rows: repeat(8,80px);
+}
+.cell1,.cell2{
+    height:80px;
+    width:80px;
+    border:solid burlywood 1px;
+}
+.cell_1:nth-child(odd) {
+    background-color: white;
+}
+
+.cell_1:nth-child(even) {
+    background-color: black;
+}
+.cell_2:nth-child(odd) {
+    background-color: black;
+}
+
+.cell_2:nth-child(even) {
+    background-color: white;
+}
+
+
+.center{
+    margin-left:600px;
+    margin-top:100px;
+}
+
+body{
+    background: radial-gradient(#fff,#ffd6d6);
+}
+
+.animation {
+animation: movement 5s forwards ease-in;
+}
+@keyframes movement{
+    0%,20%,40%,60%,80%,100%{
+       margin-top:0px;
+    }
+    10%,30%,50%,70%,90%{
+        margin-top:150px;
+    }
+}
